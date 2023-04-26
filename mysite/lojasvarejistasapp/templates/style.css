@@ -1,24 +1,183 @@
 @charset "utf-8";
 
+:root {
+    /* 60% element on page*/
+    /* banner, backgrounds and main div */
+    --main-background-color: #f8f2f2;
+    --main-text-size: 50px;
+    --main-text-color: #3F3F3F;
+    --main-font-family: monserrat, sans-serif;
+    --main-font-weight: bolder;
+    
+    /* 30% element on page */
+    /* subtitles, cell-headers and divs */
+    --second-background-color: #fafafa;
+    --secondary-text-size: 20px;
+    --secondary-text-color: #3F3F3F;
+    --head-cell-color: #E5E5E5;
+    --cell-color: #ffffff;
+    --font-family: monserrat, sans-serif;
+    --font-weight: bold;
+
+    /* 10 % element on page */
+    /* buttons, links and texts */
+    --text-size: 15px;
+    --text-color: #020202;
+    --btn-text-color: #ffffff;
+    --btn-submit-color: #437c43d5;
+    --btn-edit-color: #485abd;
+    --btn-view-color: #575252;
+    --btn-decline-color: #f2f2f2;
+    --btn-delete-color: #a33131;
+    --btn-home-color: #3970b8d5; 
+    --link-color: #719ACE
+}
+
+body {
+    background-color: var(--main-background-color);
+}
+
+a {
+    color: var(--link-color);
+    text-decoration: underline;
+}
+
+h1 {
+    text-shadow: 0.1em 0.1em 0.1em #33333323
+}
+
 .banner {
+    padding-bottom: 50px;
     background-position: center;    
     width: 100%;
-    display: flex;
+    display: grid;
     justify-content: center;
     align-items: center;
+    text-align: center;
+    font-size: var(--main-text-size);
+    font-weight: var(--main-font-weight);
+    font-family: var(--main-font-family);
+    color: var(--main-text-color);
 }
+
 .container {
+    width: 80%;
+    padding: 10px 0px 20px 0px;
+    background-color: var(--second-background-color);
     display: flex;    
     justify-content: center;
     align-items: center;
+    text-align: center;
+    margin: auto;
+    border-radius: 20px;
+    box-shadow: 10px 10px 30px 10px rgba(0, 0, 0, 0.123)
 }
-.h1 {
+
+/* Try to sytle every unique table */
+/* Isn't working */
+.loja_table {
+    padding: 100px;    
+}
+
+.left_side_cells {
+    padding: 10px 0px 10px 80px;
+}
+
+.col_first_head_cell {
+    border-collapse: inherit;
+    border-radius: 20px 0px 0px 20px;
+    /*border-right: 1px solid black;*/
+    /*padding: 15px 110px 15px 110px;*/
+}
+
+.col_last_head_cell {
+    border-collapse: inherit;
+    border-radius: 0px 20px 20px 0px;
+    /*padding: 15px 110px 15px 80px;*/
+}
+
+.head_cell {
+    text-align: center;    
+    background-color: var(--head-cell-color);
+    font-family: var(--font-family);
+    color: var(--secondary-text-color);
+    font-size: var(--secondary-text-size);
+    font-weight: var(--font-weight);
+    width: 10%;
+    padding: 10px;
+}
+
+.cells {
+    padding: 10px 50px 10px 50px;
+    border-right: 1px solid black;
     text-align: center;
 }
 
 table { 
+    text-align: center;    
     border-collapse: collapse;
-    border-spacing: 0;
-    width: 40%;
-    border: 1px solid #ddd;
+    color: var(--text-color);
+    width: 90%;    
+    margin: auto;   
+    font-family: var(--font-family); 
+    font-size: var(--text-size);    
 } 
+
+.btn {
+    color: var(--btn-text-color);
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px 10px 20px;
+    font-size: var(--text-size);
+    font-family: var(--font-family);
+    font-weight: var(--font-weight);
+    cursor: pointer;
+    margin: 8px 0px 0px 0px;
+    box-shadow: 7px 6px 28px 1px  rgba(0, 0, 0, 0.137)  
+}
+
+
+.btn-link {
+    color: var(--btn-text-color);
+    text-decoration: none;
+}
+
+.btn-submit {
+    background-color: var(--btn-submit-color);   
+}
+
+.btn-home {
+    background-color: var(--btn-home-color);
+}
+
+.btn-edit {
+    background-color: var(--btn-edit-color);
+}
+
+.btn-delete {
+    background-color: var(--btn-delete-color);
+}
+
+.btn-view {
+    background-color: var(--btn-view-color);
+}
+
+.btn:active {
+    transform: scale(0.98);
+    /* Scaling button to 0.98 to its original size */
+    box-shadow: 3px 2px 22px 1px rgba(0, 0, 0, 0.24);
+    /* Lowering the shadow */
+}
+
+footer {
+    background-color: var(--secondary-background-color);
+    color: var(--main-text-color);
+    font-size: var(--main-text-size);
+    font-family: var(--main-font-family);
+    font-weight: var(--main-font-weight);
+    text-align: center;
+    padding: 100px 0px 10px 0px;
+    margin: auto;
+    width: 100%;    
+}
+
