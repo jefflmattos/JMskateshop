@@ -9,3 +9,8 @@ def lojas(request):
 
 def produtos(request):
     return render(request, 'produtos.html')
+
+def vendas(request):
+    return render(request, 'vendas.html')
+
+

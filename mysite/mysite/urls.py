@@ -20,4 +20,7 @@ from lojasvarejistasapp import views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', views.home, name='home'),
+    path('lojas/', views.lojas, name='lojas'),
+    path('produtos/', views.produtos, name='produtos'),
+    path('vendas/', views.vendas, name='vendas')
 ]

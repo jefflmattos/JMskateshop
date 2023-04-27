@@ -1,11 +1,11 @@
 @charset "utf-8";
 
-/* Variables */
+/* *** Variables *** */
 :root {
     /* 60% element on page*/
-    /* banner, backgrounds and main div */
+    /* Titles, banners, backgrounds and main divs */
     --main-background-color: #f8f2f2;
-    --main-text-size: 50px;
+    --main-text-size: 100px;
     --main-text-color: #3F3F3F;
     --main-font-family: monserrat, sans-serif;
     --main-font-weight: bolder;
@@ -18,12 +18,13 @@
     --head-cell-color: #E5E5E5;
     --cell-color: #ffffff;
     --font-family: monserrat, sans-serif;
-    --font-weight: bold;
+    --font-weight: bolder;
 
     /* 10 % element on page */
     /* buttons, links and texts */
     --text-size: 15px;
     --text-color: #020202;
+    --text-weight: light;
     --btn-text-color: #ffffff;
     --btn-submit-color: #437c43d5;
     --btn-edit-color: #485abd;
@@ -36,36 +37,26 @@
 
 /* =========================Layout================================== */
 
-/* Tags */
+/* *** Tags *** */
 body {
     background-color: var(--main-background-color);
 }
 
 footer {
     background-color: var(--secondary-background-color);
-    color: var(--main-text-color);
-    font-size: var(--main-text-size);
-    font-family: var(--main-font-family);
-    font-weight: var(--main-font-weight);
-    text-align: center;
     padding: 100px 0px 10px 0px;
     margin: auto;
     width: 100%;    
 }
 
-/* Classes */
+/* *** Classes ***/
 .banner {
     padding-bottom: 50px;
     background-position: center;    
     width: 100%;
     display: grid;
     justify-content: center;
-    align-items: center;
-    text-align: center;
-    font-size: var(--main-text-size);
-    font-weight: var(--main-font-weight);
-    font-family: var(--main-font-family);
-    color: var(--main-text-color);
+    align-items: center;   
 }
 
 .container {
@@ -81,9 +72,7 @@ footer {
     box-shadow: 10px 10px 30px 10px rgba(0, 0, 0, 0.123)
 }
 
-
-
-/* IDs */
+/* *** IDs *** */
 #produto_container {
     width: 90%
 }
@@ -92,10 +81,13 @@ footer {
     width: 60%;
 }
 
+#vendas_container {
+    display: grid;
+}
 
 /* =========================Text and caracters================================== */
 
-/* Tags */
+/* *** Tags *** */
 a {
     color: var(--link-color);
     text-decoration: underline;
@@ -106,47 +98,66 @@ h1 {
 }
 
 
-/* =========================Tables================================== */
-/* I have some padding issues with the tables */
 
-/* Tags */
-table { 
-    text-align: center;    
-    border-collapse: collapse;
+/* *** Classes *** */
+
+.texts {
+    font-size: var(--text-size);
+    font-family: var(--font-family);
+    font-weight: var(--text-weight);
     color: var(--text-color);
+    text-align: center;
+    margin: auto;
+}
+/* *** IDs *** */
+#title {
+    text-align: center;
+    font-variant: small-caps;
+    font-size: var(--main-text-size);
+    font-weight: var(--main-font-weight);
+    font-family: var(--main-font-family);
+    color: var(--main-text-color);
+}
+
+#subtitle {
+    font-size: var(--secondary-text-size);
+    font-family: var(--font-family);
+    font-weight: var(--font-weight);
+    color: var(--secondary-text-color);
+    text-align: center;
+    padding: 10px 0px 10px 0px;
+    margin: auto;
+}
+
+/* =========================Tables================================== */
+/* I have some padding issues with the tables, need to fix it */
+
+/* *** Tags *** */
+table { 
+    border-collapse: collapse;
     width: 90%;    
     margin: auto;   
-    font-family: var(--font-family); 
-    font-size: var(--text-size);  
     margin:auto;
     padding: 500px;
 }
 
-/* Classes */
+/* *** Classes *** */
 
-.home_table {
-    
-    
+.home_table {  
     width: 60%;
-    
 }
+
 .head_table {
-    padding: 1000px;
-    text-align: center;    
+    padding: 1000px; 
     background-color: var(--head-cell-color);
-    font-family: var(--font-family);
-    color: var(--secondary-text-color);
-    font-size: var(--secondary-text-size);
-    font-weight: var(--font-weight);
-    width: 100%;
-    
+    width: 100%;    
 }
 
-.cells { 
-    text-align: center;
-}
+/*.cells { 
 
-/* IDs */
+} */
+
+/* *** IDs *** */
 #produto_head_table {
     padding: 100px;
 }
@@ -164,28 +175,33 @@ table {
     padding: 100px;
 }
 
+#col_4_loja_head_cell{
+    width: 20%;
+}
 
-
-
+#loja_col_last {
+    display: grid;
+    width: 30%;
+    margin: auto;
+    
+}
 
 
 /* =========================Buttons================================== */
+/*need to decrease size of "Ações" "buttons*/
 
-/* Classes */
+/* *** Classes *** */
 .btn {
-    color: var(--btn-text-color);
+    font-weight: bold;
     border: none;
     border-radius: 5px;
     padding: 10px 20px 10px 20px;
-    font-size: var(--text-size);
-    font-family: var(--font-family);
-    font-weight: var(--font-weight);
     cursor: pointer;
     margin: 8px 0px 0px 0px;
     box-shadow: 7px 6px 28px 1px  rgba(0, 0, 0, 0.137)  
 }
 
-/* IDs */
+/* *** IDs *** */
 #btn-link {
     color: var(--btn-text-color);
     text-decoration: none;
@@ -203,17 +219,20 @@ table {
 
 #btn-edit {
     background-color: var(--btn-edit-color);
+    margin-top: 3%;
 }
 
 #btn-delete {
     background-color: var(--btn-delete-color);
+    margin-top: 3%;
 }
 
 #btn-view {
     background-color: var(--btn-view-color);
+    
 }
 
-/* animation */
+/* *** animation *** */
 .btn:hover {
     box-shadow: 3px 2px 22px 1px rgba(0, 0, 0, 0.178);
     /* Adding a shadow when hovering */
