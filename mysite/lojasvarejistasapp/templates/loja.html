@@ -9,56 +9,52 @@
 </head>
 <body>
     <div class="banner">
-        <h1>Lojas</h1>
-        <button class="btn btn-submit">
-            <a class='btn-link' href="#">Adicionar</a>
+        <h1 class="tile">Lojas</h1>
+        <button class="btn" id="btn-submit">
+            <a id='btn-link' href="#">Adicionar</a>
         </button>
     </div>
 
     <div class="container">
-        <table>
-            <tr class="loja_table">
-                <td class="head_cell col_first_head_cell">ID</td>
-                <td class="head_cell col_2_head_cell">Nome</td>
-                <td class="head_cell col_3_head_cell">Endereço</td>  
-                <td class="head_cell col_4_head_cell">Horário de Atendimento</td>  
-                <td class="head_cell col_last_head_cell">Ações</td>                  
+        <table class="loja_table">
+            <tr class="head_table" id="loja_head_table">
+                <td id="col_first_head_cell">ID</td>
+                <td id="col_2_loja_head_cell">Nome</td>
+                <td id="col_3_loja_head_cell">Endereço</td>  
+                <td id="col_4_loja_head_cell">Horário de Atendimento</td>  
+                <td id="col_last_head_cell">Ações</td>                  
             </tr>
             
-            <tr>
-                <td class="col_1">
+            <tr class="cells" id="loja_cells">
+                <td id="loja_col_first">
                     ID Loja
                 </td>
-                <td class="col_2">                    
+                <td id="loja_col_2">                    
                         Nome Loja
                 </td>   
-                <td class="col_3">
+                <td id="loja_col_3">
                     Endereço Loja
                 </td>
-                <td class="col_4">                    
+                <td id="loja_col_4">                    
                     Horário loja
                 </td>
-                <td class="col_5">                    
-                    <button class="btn btn-view">
-                        <a class="btn-link" href="#">Visualizar</a>
+                <td id="loja_col_last">                    
+                    <button class="btn" id="btn-view">
+                        <a id="btn-link" href="#">Visualizar</a>
                     </button>
-                    <button class="btn btn-edit">
-                        <a class="btn-link" href="#">Editar</a>
+                    <button class="btn" id="btn-edit">
+                        <a id="btn-link" href="#">Editar</a>
                     </button>
-                    <button class="btn btn-delete">
-                        <a class="btn-link" href="#">Excluir</a>
+                    <button class="btn" id="btn-delete">
+                        <a id="btn-link" href="#">Excluir</a>
                     </button>
                 </td>                                  
-            </tr>
-
-            <tr>
-                
-            </tr>
+            </tr>           
         </table>
     </div>
     <footer>
-        <button class="btn btn-home">
-            <a class="btn-link" href="index.html">Home</a>
+        <button class="btn" id="btn-home">
+            <a id="btn-link" href="index.html">Home</a>
         </button>
     </footer>
     

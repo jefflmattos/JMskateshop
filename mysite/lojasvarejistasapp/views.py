@@ -4,4 +4,8 @@ from django.shortcuts import render
 def home(request):
     return render(request, 'index.html')
 
-# Create your views here.
+def lojas(request):
+    return render(request, 'lojas.html')
+
+def produtos(request):
+    return render(request, 'produtos.html')
