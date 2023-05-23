@@ -1,13 +1,10 @@
 const fruits = ["Banana", "Orange", "Apple", "Mango"];
 
 
-function iterateArr() {
-    let text = "<ul>";
-    for (let i = 0; i < fruits.length; i++) {
-        text += "<li>" + fruits[i] + "</li>";
-    }
-    text += "</ul>";
-    return text;
+function salute() {
+    
+    
+    return `<h1>Hi, I'm a function</h1>` ;
 }
 
-console.log(iterateArr()); 
+document.getElementById("demo").innerHTML = salute();
