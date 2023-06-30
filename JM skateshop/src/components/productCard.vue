@@ -1,12 +1,17 @@
 <template>
 
-    <article class="row card p-5">
-        <a :href="product_link">
-            <figure>
-                <img class="img-thumbnail" :src="img" :alt="alt" >
-                <figcaption> {{ img_description }}</figcaption>   
-            </figure>
-        </a>
+    <article class="col-sm-4 card p-3 container bg-light">
+        <figure>
+            <img 
+            class="img-thumbnail mx-auto d-block"
+            :src="img"
+            :alt="alt">
+            <a 
+            :href="product_link"
+            class="card-link">
+            <figcaption class="text-center card-text"> {{ img_description }}</figcaption>   
+            </a>
+        </figure>
     </article>
 
 </template>
@@ -30,3 +35,9 @@
         }
     }
 </script>
+
+<style>
+    article {
+        outline: 1px green dashed;
+    }
+</style>
