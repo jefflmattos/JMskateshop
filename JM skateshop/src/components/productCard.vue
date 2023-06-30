@@ -23,10 +23,10 @@
             }
         },
         created() { //msg que aparece quando o card é criado, podendo usar para load padrão
-            this.msg = "iai"
+            this.msg = ""
         },
         mounted() { //quando os dados do bd são finalmente carregados
-            this.msg = "fala tu"
+            this.msg = ""
         }
     }
 </script>
