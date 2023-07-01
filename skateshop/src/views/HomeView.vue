@@ -2,7 +2,12 @@
   <main>        
       <BannerHead />
       <FilterProduct />
-      <product_card />
+      <product_card
+      product_photo="../../public/images/lixa.jpg"
+      photo_description="inhaimmmmm"
+      product_name="produto nome"
+      product_link="#"
+      product_alt="Descrição do produto" />
   </main>
  
 </template>
