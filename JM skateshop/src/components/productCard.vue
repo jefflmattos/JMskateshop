@@ -1,15 +1,13 @@
 <template>
 
-    <article class="col-sm-4 card p-3 container bg-light">
+    <article class="card">
         <figure>
-            <img 
-            class="img-thumbnail mx-auto d-block"
+            <img             
             :src="img"
             :alt="alt">
             <a 
-            :href="product_link"
-            class="card-link">
-            <figcaption class="text-center card-text"> {{ img_description }}</figcaption>   
+            :href="product_link">
+            <figcaption> {{ img_description }}</figcaption>   
             </a>
         </figure>
     </article>
@@ -36,8 +34,21 @@
     }
 </script>
 
-<style>
-    article {
-        outline: 1px green dashed;
-    }
+<style scoped>
+   .card {
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+    width: fit-content;
+    align-items: center;
+    padding: 3px;
+    position: relative;
+    left: 50px;    
+   }
+   .card:hover {
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
+   img {
+    width: 200px;
+   }
 </style>

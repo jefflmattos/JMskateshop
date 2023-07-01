@@ -1,9 +1,12 @@
 <template>
-    <nav class="navbar container-fluid">
-        <a class="navbar-brand" href="#">Navbar</a>
-        <ul class="nav">
-            <li class="nav-item">
-                <a class="nav-link active" href="#">Active</a>
+    <nav class="nav">
+        
+        <a 
+        class="navbar-brand"
+        href="#">Navbar</a>
+        <ul>
+            <li >
+                <a href="#">Active</a>
             </li>
         </ul>
     </nav>
@@ -17,7 +20,12 @@ export default {
         return {
             
         }
-    },
+    }
 }
 
 </script>
+
+<style scoped>
+
+
+</style>
