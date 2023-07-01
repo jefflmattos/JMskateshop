@@ -1,14 +1,20 @@
-<template>
-    <product_card/>
+<template >
+    <main>
+        <NavBar/>
+        <router-view/>       
+    </main>   
 </template>
 
 <script>
-    import product_card from './components/productCard.vue'
+    import NavBar from '../../skateshop/src/components/NavBar.vue'
 
     export default {
-        name: 'App',
         components: {
-            product_card
+            NavBar
         }
     }
 </script>
+
+<style scoped>
+    
+</style>

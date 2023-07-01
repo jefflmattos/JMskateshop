@@ -1,13 +1,14 @@
 <template>
+    
 
     <article class="card">
         <figure>
             <img             
-            :src="img"
-            :alt="alt">
+            :src="product_photo_path"
+            :alt="product_alt">
             <a 
             :href="product_link">
-            <figcaption> {{ img_description }}</figcaption>   
+            <figcaption> {{ product_name }}</figcaption>   
             </a>
         </figure>
     </article>
@@ -17,12 +18,15 @@
 <script>
     export default {
         name: 'product_card',
+        props: {
+            product_photo_path: String,
+            product_alt: String,
+            product_link: String,
+            product_name: String
+        },
         data() {
             return {
-                img: "/img/amortecedores.jpg",
-                alt: "img description",
-                img_description: "Produto 1",
-                product_link: "#"
+
             }
         },
         created() { //msg que aparece quando o card é criado, podendo usar para load padrão
