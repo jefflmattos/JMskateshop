@@ -1,0 +1,61 @@
+{
+    "products": [
+        {"id": 1,
+        "name": "Lixa",
+        "price": 100,
+        "description": "Product 1 lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+        "image_source": "lixa",
+        "image_alt": "Lixa de skate"
+        },
+        {"id": 2,
+        "name": "Parafusos",
+        "price": 200,
+        "description": "Product 2 description",
+        "image_source": "parafusos",
+        "image_alt": "Parafusos de skate"
+        },
+        {"id": 3,
+        "name": "Peças diversas",
+        "price": 300,
+        "description": "Product 3 description",
+        "image_source": "peças",
+        "image_alt": "Peças de skate"
+        },
+        {"id": 4,
+        "name": "Jogo de rodas",
+        "price": 400,
+        "description": "Product 4 description",
+        "image_source": "roda-skate",
+        "image_alt": "Rodas de skate"
+        },
+        {"id": 5,
+        "name": "Rolamentos Abec 7",
+        "price": 500,
+        "description": "Product 5 description",
+        "image_source": "rolamentos",
+        "image_alt": "Rolamentos de skate"
+        },
+        {"id": 6,
+        "name": "Shape",
+        "price": 600,
+        "description": "Product 6 description",
+        "image_source": "shape",
+        "image_alt": "Shape de skate"
+        },
+        {"id": 7,
+        "name": "Skate montado",
+        "price": 700,
+        "description": "Product 7 description",
+        "image_source": "skate_completo",
+        "image_alt": "Skate completo"
+        },
+        {"id": 8,
+        "name": "Truck",
+        "price": 800,
+        "description": "Product 8 description",
+        "image_source": "truck",
+        "image_alt": "Truck de skate"
+        }
+        
+    ]
+}

@@ -2,30 +2,49 @@
   <main>        
       <BannerHead />
       <FilterProduct />
+      <h1>  oi</h1>
       <product_card
-      product_photo="../../public/images/lixa.jpg"
-      photo_description="inhaimmmmm"
-      product_name="produto nome"
-      product_link="#"
-      product_alt="Descrição do produto" />
+      
+      
+      />
+      
   </main>
  
 </template>
 
 <script>
-  import product_card from '../components/productCard.vue'
+  
+  //import components 
+ // import product_card from '../components/productCard.vue'
   import BannerHead from '../components/BannerHead.vue'
   import FilterProduct from '../components/FilterProduct.vue'
+  
 
   export default {
       name: 'HomeView',
       components: {
-          product_card,
           BannerHead,
-          FilterProduct
+          FilterProduct,
+          
+      },  
+    data() {
+        return {
+            products: []
+    }
+    
+    },
+    methods: {
+      getProducts(products) {
+        this.product = products
       }
-  }
+    }
+    //created() { //msg que aparece quando o card é criado, podendo usar para load padrão
+      //  this.getProduct();
+    //},
+    
+}
 </script>
+
 
 <style scoped>
 
