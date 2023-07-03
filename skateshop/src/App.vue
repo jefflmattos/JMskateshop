@@ -6,7 +6,6 @@
     </nav>
     <productCard 
     v-for="p in product" 
-    class="grid"
     :key="p.id"
     :product_name="p.name"
     :product_price="p.price"
