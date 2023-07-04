@@ -4,7 +4,9 @@
             <figure>
                 <img             
                 :src="img_src"
-                :alt="image_alt">
+                :alt="image_alt"
+                style="width: 200px; height: 200px;"
+                >
                 <a 
                 :href="product_name">
                 <figcaption> {{ product_name }}</figcaption>   
@@ -45,12 +47,11 @@
     padding: 3px;
     position: relative;
     left: 50px;    
+    text-align: center;
    }
    .card:hover {
   box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
 }
 
-   img {
-    width: 200px;
-   }
+   
 </style>

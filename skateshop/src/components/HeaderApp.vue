@@ -11,7 +11,7 @@
         to="/">Home</router-link> 
         <router-link 
         class="link"
-        to="/ProductView">Product</router-link>
+        to="/ProductAbout">Product</router-link>
     </header>
 
 </template> 
