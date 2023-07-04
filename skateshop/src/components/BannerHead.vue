@@ -1,3 +1,11 @@
+
+
+<template>
+    <header>        
+        <h1> Skate with style, skate with us. </h1>
+    </header>
+</template>
+
 <script>
     export default {
         name: 'BannerHead',
@@ -9,16 +17,26 @@
     }
 </script>
 
-<template>
-    <header class="container-fluid bg-light p-5">
-        <h1 class="text-center"> Welcome to JM Skateshop</h1>
-    </header>
-</template>
-
-<style scope>
+<style scoped>
 header {
+    background-image: url('../../public/images/banner-pusher.jpg');
+    background-position: 0 -250px;
+    background-size: cover;
+    height: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin-bottom: 10px;
+    
+}
+
+h1 {
+    color: #FFF;
     text-align: center;
-    padding: 10px;
-    background-color: rgba(250, 235, 215, 0.295);
+    font-size: 40px;
+    background-color: #2222228e;
+    padding: 20px 40px;
+    border-radius: 20px;
+    margin-left: 10px ;
 }
 </style>

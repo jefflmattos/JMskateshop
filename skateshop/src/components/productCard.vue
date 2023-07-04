@@ -1,17 +1,17 @@
 <template>
     
-
-    <article class="card">
-        <figure>
-            <img             
-            :src="product_photo_path"
-            :alt="product_alt">
-            <a 
-            :href="product_link">
-            <figcaption> {{ product_name }}</figcaption>   
-            </a>
-        </figure>
-    </article>
+        <article class="card">
+            <figure>
+                <img             
+                :src="img_src"
+                :alt="image_alt">
+                <a 
+                :href="product_name">
+                <figcaption> {{ product_name }}</figcaption>   
+                </a>
+            </figure> 
+        </article>
+        
 
 </template>
 
@@ -19,27 +19,25 @@
     export default {
         name: 'product_card',
         props: {
-            product_photo_path: String,
-            product_alt: String,
-            product_link: String,
-            product_name: String
-        },
-        data() {
-            return {
+            id: String,
+            product_name: String,
+            product_description: String,
+            product_price: Int16Array,
+            image_alt: String,
+            image_product: String,
+            image_source: String
 
-            }
         },
-        created() { //msg que aparece quando o card é criado, podendo usar para load padrão
-            this.msg = ""
-        },
-        mounted() { //quando os dados do bd são finalmente carregados
-            this.msg = ""
-        }
+    computed: { // dinnamically render source images
+      img_src() { return `../images/${this.image_source}.jpg` }
+    }
     }
 </script>
 
 <style scoped>
+
    .card {
+    display: grid;
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
     transition: 0.3s;
     width: fit-content;
