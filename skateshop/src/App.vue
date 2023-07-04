@@ -1,9 +1,7 @@
 <template>
   <div>
-    <nav>
-      <router-link to="/">Home</router-link> |
-      <router-link to="/ProductView">Product</router-link>
-    </nav>
+    <HeaderApp />
+    <router-view> </router-view>
     <productCard 
     v-for="p in product" 
     :key="p.id"
@@ -11,22 +9,27 @@
     :product_price="p.price"
     :image_source="p.image_source"
     :image_alt="p.image_alt"
-    
-
-
     />
+    <footer-app />
   </div>
 </template>
 
 
 <script>
   import productCard from './components/productCard.vue';
+  import HeaderApp from './components/HeaderApp.vue';
+  import FooterApp from './components/FooterApp.vue'
+  
 
 export default {
   name: 'App',
   components: {
-    productCard
-  },
+    productCard,
+    HeaderApp,
+    FooterApp
+
+    
+},
   data() {
     return {
       product: [],
@@ -41,7 +44,11 @@ export default {
 };
 </script>
 
-<style scoped>
+<style>
+* {
+  margin: 0;
+  padding: 0;
+}
 .grid {
   display: relative;
   

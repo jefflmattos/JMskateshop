@@ -2,7 +2,7 @@
   <main>        
       <BannerHead />
       <FilterProduct />
-      <h1>  oi</h1>
+      <h2> Meet our products</h2>
       <product_card
       
       
@@ -47,5 +47,8 @@
 
 
 <style scoped>
-
+  h2 {
+    
+    text-align: center;
+  }
 </style>
