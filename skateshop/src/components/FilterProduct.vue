@@ -1,3 +1,9 @@
+<template>
+    <div>
+      <input v-model="searchTerm" type="text" placeholder="Search products">
+    </div>
+  </template>
+  
 <script>
 export default {
     name: "FilterProduct",
@@ -8,12 +14,6 @@ export default {
     }
 }
 </script>
-
-<template>       
-    <input 
-    type="text" 
-    placeholder="Buscar Produtos">
-</template>
 
 <style scope>
     input {

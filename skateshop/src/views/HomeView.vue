@@ -6,7 +6,7 @@
       
       <section class="grid">
         <productCard 
-        v-for="p in product" 
+        v-for="p in filteredProducts" 
         :key="p.id"
         :product_name="p.name"
         :product_price="p.price"
@@ -40,8 +40,16 @@
       },  
     data() {
         return {
-            product: []
+            product: [],
+            searchTerm: ''
           }
+        },
+        computed: {
+          filteredProducts() {
+            return this.product.filter(
+              (p) => p.name.toLowerCase().includes(this.searchTerm.toLowerCase())
+            );
+          },
         },
         methods: { //push the product details to ProductAbout view
           goToProductDetails(product) {
@@ -56,19 +64,21 @@
               }
               }
             );
-          } 
+          }
         },
         created() {
           //IDK why I coundn't make it with axios, so I used fetch
           fetch('http://localhost:3000/products')
           .then(response => response.json())
           .then(data => this.product = data)
-        }
-    //created() { //msg que aparece quando o card é criado, podendo usar para load padrão
-      //  this.getProduct();
-    //},
-    
-}
+        },
+        watch: {
+          searchTerm: {
+            handler: 'updateFilteredProducts',
+            immediate: true, // Execute imediatamente após a criação do componente
+          },
+        } 
+  }
 </script>
 
 
