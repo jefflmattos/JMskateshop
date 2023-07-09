@@ -1,5 +1,5 @@
 <template>
-
+    <!--  object on :to = if path adress is modified on router, I don't need change the adress here too  -->
     <header>
         <img 
         id="logo"
@@ -7,11 +7,9 @@
         alt="">
         <h1> JM Skateshop </h1>
         <router-link 
-        class="link"
-        to="/">Home</router-link> 
-        <router-link 
-        class="link"
-        to="/ProductView">Product</router-link>
+        class="link"        
+        :to="{name: 'home'}">Home</router-link> 
+       
     </header>
 
 </template> 

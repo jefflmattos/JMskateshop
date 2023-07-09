@@ -1,14 +1,16 @@
 <template>
     
         <article class="card">
+            
             <figure>
                 <img             
                 :src="img_src"
-                :alt="image_alt">
-                <a 
-                :href="product_name">
-                <figcaption> {{ product_name }}</figcaption>   
-                </a>
+                :alt="image_alt"
+                style="width: 200px; height: 200px;"
+                >
+                <router-link :to="`/ProductAbout/${id}`">                
+                <figcaption> {{ product_name }}  </figcaption>   
+                </router-link>
             </figure> 
         </article>
         
@@ -22,7 +24,7 @@
             id: String,
             product_name: String,
             product_description: String,
-            product_price: Int16Array,
+            product_price: Number,
             image_alt: String,
             image_product: String,
             image_source: String
@@ -45,12 +47,11 @@
     padding: 3px;
     position: relative;
     left: 50px;    
+    text-align: center;
    }
    .card:hover {
   box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
 }
 
-   img {
-    width: 200px;
-   }
+   
 </style>

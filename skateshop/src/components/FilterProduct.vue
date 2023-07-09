@@ -1,19 +1,18 @@
+<template>
+    <div>
+      <input v-bind:value="value" 
+      v-on:input="$emit('input', $event.target.value)"
+      placeholder="Search products">
+    </div>
+  </template>
+  
 <script>
 export default {
     name: "FilterProduct",
-    data() {
-        return {
-
-        }
+    props: ['value']
     }
-}
-</script>
 
-<template>       
-    <input 
-    type="text" 
-    placeholder="Buscar Produtos">
-</template>
+</script>
 
 <style scope>
     input {

@@ -1,12 +1,22 @@
 <template >
   <main>        
       <BannerHead />
-      <FilterProduct />
       <h2> Meet our products</h2>
-      <product_card
+      <FilterProduct v-model="keyword" />
       
-      
-      />
+      <section class="grid">
+        <productCard 
+        v-for="p in filterProducts" 
+        :key="p.id"
+        :id="p.id"
+        :product_name="p.name"
+        :product_price="p.price"
+        :image_source="p.image_source"
+        :image_alt="p.image_alt"
+        />
+
+        
+  </section>
       
   </main>
  
@@ -18,31 +28,67 @@
  // import product_card from '../components/productCard.vue'
   import BannerHead from '../components/BannerHead.vue'
   import FilterProduct from '../components/FilterProduct.vue'
+  import productCard from '../components/productCard.vue'
   
 
   export default {
       name: 'HomeView',
       components: {
-          BannerHead,
-          FilterProduct,
-          
+        BannerHead,
+        FilterProduct,
+        productCard
+        
       },  
     data() {
         return {
-            products: []
-    }
-    
-    },
-    methods: {
-      getProducts(products) {
-        this.product = products
-      }
-    }
-    //created() { //msg que aparece quando o card é criado, podendo usar para load padrão
-      //  this.getProduct();
-    //},
-    
-}
+            product: [],
+            keyword: ''
+          }
+        },
+        computed: {
+          filterProducts() {
+          const { product, keyword } = this;
+          return product.filter(( { name }) =>  name.includes(keyword));
+          },
+          // get the route of each product
+          //productRoute() {
+          //  return this.$route.params.productId;
+          //}
+        },
+        methods: {
+          //IDK why I coundn't make it with axios, so I used fetch
+          async loadProductData() {
+            try {
+              const response = await fetch('http://localhost:3000/products');
+              if (!response.ok) {
+                throw new Error('Failed to fetch product data');
+              }
+              const data = await response.json();
+              this.product = data;
+            } catch (error) {
+              console.error(error);
+              // should create a error message for user
+            }
+          },
+           //push the product card details to ProductAbout view
+          goToProductAbout(product) {
+            this.$router.push({
+              name: 'ProductAbout', params: {
+                productId: product.id,
+                productName: product.name,
+                productPrice: product.price,
+                productDetails: product.description,
+                imageSource: product.image_source,
+                imageAlt: product.image_alt
+              }
+              }
+            );
+          }
+        },
+        created() {
+          this.loadProductData()}
+           
+  }
 </script>
 
 
@@ -51,4 +97,12 @@
     
     text-align: center;
   }
+
+  .grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;  
+  align-items: center;
+  margin-left: 50px;
+}
 </style>
