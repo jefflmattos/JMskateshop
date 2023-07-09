@@ -1,18 +1,17 @@
 <template>
     <div>
-      <input v-model="searchTerm" type="text" placeholder="Search products">
+      <input v-bind:value="value" 
+      v-on:input="$emit('input', $event.target.value)"
+      placeholder="Search products">
     </div>
   </template>
   
 <script>
 export default {
     name: "FilterProduct",
-    data() {
-        return {
-
-        }
+    props: ['value']
     }
-}
+
 </script>
 
 <style scope>

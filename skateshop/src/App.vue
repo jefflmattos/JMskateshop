@@ -1,7 +1,7 @@
 <template>
   <div>
     <HeaderApp />
-    <router-view> </router-view>
+    <router-view > </router-view>
     <footer-app />
   </div>
 </template>
@@ -24,7 +24,9 @@
 * {
   margin: 0;
   padding: 0;
+  position: relative
 }
+
 
 
 </style>

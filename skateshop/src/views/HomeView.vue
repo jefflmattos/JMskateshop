@@ -2,12 +2,13 @@
   <main>        
       <BannerHead />
       <h2> Meet our products</h2>
-      <FilterProduct />
+      <FilterProduct v-model="keyword" />
       
       <section class="grid">
         <productCard 
-        v-for="p in filteredProducts" 
+        v-for="p in filterProducts" 
         :key="p.id"
+        :id="p.id"
         :product_name="p.name"
         :product_price="p.price"
         :image_source="p.image_source"
@@ -41,20 +42,38 @@
     data() {
         return {
             product: [],
-            searchTerm: ''
+            keyword: ''
           }
         },
         computed: {
-          filteredProducts() {
-            return this.product.filter(
-              (p) => p.name.toLowerCase().includes(this.searchTerm.toLowerCase())
-            );
+          filterProducts() {
+          const { product, keyword } = this;
+          return product.filter(( { name }) =>  name.includes(keyword));
           },
+          // get the route of each product
+          //productRoute() {
+          //  return this.$route.params.productId;
+          //}
         },
-        methods: { //push the product details to ProductAbout view
-          goToProductDetails(product) {
+        methods: {
+          //IDK why I coundn't make it with axios, so I used fetch
+          async loadProductData() {
+            try {
+              const response = await fetch('http://localhost:3000/products');
+              if (!response.ok) {
+                throw new Error('Failed to fetch product data');
+              }
+              const data = await response.json();
+              this.product = data;
+            } catch (error) {
+              console.error(error);
+              // should create a error message for user
+            }
+          },
+           //push the product card details to ProductAbout view
+          goToProductAbout(product) {
             this.$router.push({
-              name: 'ProductDetails', params: {
+              name: 'ProductAbout', params: {
                 productId: product.id,
                 productName: product.name,
                 productPrice: product.price,
@@ -67,17 +86,8 @@
           }
         },
         created() {
-          //IDK why I coundn't make it with axios, so I used fetch
-          fetch('http://localhost:3000/products')
-          .then(response => response.json())
-          .then(data => this.product = data)
-        },
-        watch: {
-          searchTerm: {
-            handler: 'updateFilteredProducts',
-            immediate: true, // Execute imediatamente após a criação do componente
-          },
-        } 
+          this.loadProductData()}
+           
   }
 </script>
 
