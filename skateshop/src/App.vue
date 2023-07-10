@@ -24,7 +24,8 @@
 * {
   margin: 0;
   padding: 0;
-  position: relative
+  position: relative;
+  font-family: 'Roboto', sans-serif;
 }
 
 
