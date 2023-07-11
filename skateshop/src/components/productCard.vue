@@ -19,7 +19,7 @@
 
 <script>
     export default {
-        name: 'product_card',
+        name: 'productCard',
         props: {
             id: String,
             product_name: String,

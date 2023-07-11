@@ -1,8 +1,9 @@
 <template >
   <main>        
       <BannerHead />
-      <h2> Meet our products</h2>
+      <h2> Meet our products</h2>      
       <FilterProduct v-model="keyword" />
+      
       
       <section class="grid">
         <productCard 
@@ -24,8 +25,6 @@
 
 <script>
   
-  //import components 
- // import product_card from '../components/productCard.vue'
   import BannerHead from '../components/BannerHead.vue'
   import FilterProduct from '../components/FilterProduct.vue'
   import productCard from '../components/productCard.vue'
@@ -46,17 +45,18 @@
           }
         },
         computed: {
+          //Isn't filtering products by its name and I can't figure out why
           filterProducts() {
           const { product, keyword } = this;
-          return product.filter(( { name }) =>  name.includes(keyword));
-          },
-          // get the route of each product
-          //productRoute() {
-          //  return this.$route.params.productId;
-          //}
+          console.log('Keyword:', keyword);
+          const lowerKeyword = keyword.toLowerCase();
+          console.log('Product name:', name);
+          return product.filter(( { name }) =>  name.includes(lowerKeyword));
+          }
         },
         methods: {
           //IDK why I coundn't make it with axios, so I used fetch
+          //Load async data, if response =! ok, throw error
           async loadProductData() {
             try {
               const response = await fetch('http://localhost:3000/products');

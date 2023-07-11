@@ -1,60 +1,60 @@
 {
     "products": [
         {"id": "1",
-        "name": "Lixa",
+        "name": "Skateboard Grip Tape 20gr",
         "price": 100,
-        "description": "Product 1 lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+        "description": "Enhance your skateboarding experience with our high-quality skateboard grip tape. Designed to provide optimal traction and control, our grip tape is a must-have for every skateboarder.",
         "image_source": "lixa",
-        "image_alt": "Lixa de skate"
+        "image_alt": "Skateboard Grip Tape"
         },
         {"id": "2",
-        "name": "Parafusos",
+        "name": "Screws",
         "price": 200,
-        "description": "Product 2 description",
+        "description": "Our skateboard screws are essential hardware for assembling and maintaining your skateboard. Designed with durability and functionality in mind, these screws ensure a secure and reliable connection between the skateboard deck and trucks.",
         "image_source": "parafusos",
-        "image_alt": "Parafusos de skate"
+        "image_alt": "Skateboard Screws"
         },
         {"id": "3",
-        "name": "Peças diversas",
+        "name": "Miscelaneous Pieces",
         "price": 300,
-        "description": "Product 3 description",
+        "description": "Complete your skateboard setup with our range of high-quality miscellaneous skate pieces. From bearings and riser pads to bushings and hardware, we offer everything you need to customize and maintain your skateboard for optimal performance.",
         "image_source": "peças",
-        "image_alt": "Peças de skate"
+        "image_alt": "Miscelaneous Pieces"
         },
         {"id": "4",
-        "name": "Jogo de rodas",
+        "name": "Skateboard Wheels 55mm",
         "price": 400,
-        "description": "Product 4 description",
+        "description": "Upgrade your skateboard's ride with our high-quality 55mm skateboard wheels. Designed for versatility and performance, these wheels provide a smooth and enjoyable skating experience across various terrains.",
         "image_source": "roda-skate",
-        "image_alt": "Rodas de skate"
+        "image_alt": "Skateboard Weels"
         },
         {"id": "5",
-        "name": "Rolamentos Abec 7",
+        "name": "Bearings",
         "price": 500,
-        "description": "Product 5 description",
+        "description": "Experience a smooth and fast ride with our top-quality skateboard bearings. Designed to minimize friction and maximize speed, our bearings are essential for achieving optimal performance on your skateboard.",
         "image_source": "rolamentos",
-        "image_alt": "Rolamentos de skate"
+        "image_alt": "Skateboard Bearings"
         },
         {"id": "6",
         "name": "Shape",
         "price": 600,
-        "description": "Product 6 description",
+        "description": "Our skateboard shapes are carefully crafted to provide the perfect balance of performance and versatility. Whether you're a street skater, a park rider, or a cruising enthusiast, our skateboard shapes are designed to enhance your riding experience.",
         "image_source": "shape",
-        "image_alt": "Shape de skate"
+        "image_alt": "Shape"
         },
         {"id": "7",
-        "name": "Skate montado",
+        "name": "Skateboard Complete",
         "price": 700,
-        "description": "Product 7 description",
+        "description": "Our skateboard completes are designed to provide the perfect balance of performance and value. Whether you're a beginner or a seasoned pro, our skateboard completes are the perfect choice for anyone looking to get into skateboarding.",
         "image_source": "skate_completo",
-        "image_alt": "Skate completo"
+        "image_alt": "Skateboard"
         },
         {"id": "8",
-        "name": "Truck",
+        "name": "Skateboard Trucks",
         "price": 800,
-        "description": "Product 8 description",
+        "description": "Upgrade your skateboard setup with our high-quality skateboard trucks. Designed to provide stability, control, and durability, our trucks are essential for a smooth and responsive ride.",
         "image_source": "truck",
-        "image_alt": "Truck de skate"
+        "image_alt": "Skateboard Trucks"
         }
         
     ]
